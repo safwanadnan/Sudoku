@@ -20,10 +20,14 @@ public class Sudoku {
             display_grid(grid); // display the grid
 
             // ask for coordinates where user wants to make a change
+            do { 
             System.out.println("Enter the row you want to change: ");
             int row = input.nextInt();
+            } while (row < 0 || row > 8); // check row is between 0 and 8 inclusive
+            do { 
             System.out.println("Enter the col you want to change: ");
             int col = input.nextInt();
+            } while (col < 0 || col > 8); // check column is between 0 and 8 inclusive
             do {
                 System.out.println("Enter a number between 1 and 9: ");
                 grid[row][col] = input.nextInt();
