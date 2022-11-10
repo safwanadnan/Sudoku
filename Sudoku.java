@@ -79,6 +79,7 @@ public class Sudoku {
         }
         return true;
     } // checks that the number entered does not already exist in that subgrid
+    
     public static boolean rowsol(int[][] arr) {
         for (int i = 1; i <= 9; i++) {
             for (int row = 0; row <= 8; row++) {
@@ -94,6 +95,7 @@ public class Sudoku {
         }
         return true;
     } // checks that each number exists only once in each row
+    
     public static boolean colsol(int[][] arr) {
         for (int i = 1; i <= 9; i++) {
             for (int col = 0; col <= 8; col++) {
@@ -109,6 +111,7 @@ public class Sudoku {
         }
         return true;
     } // checks that each number exists only once in each column
+    
     public static boolean subgridsol(int[][] arr) {
         for (int k = 1; k <= 9; k++) {
             for (int l = 0; l < 2; l++) {
@@ -127,6 +130,7 @@ public class Sudoku {
         }
         return true;
     } // checks that each number exists only once in each sub grid
+    
     public static boolean solution(int[][] arr) {
         return (rowsol(arr) && colsol(arr) && subgridsol(arr));
     } // checks that each number is in its correct position
